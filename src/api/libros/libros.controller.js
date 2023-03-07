@@ -38,7 +38,6 @@ const getLibrosByTitle = async (req, res, next) => {
     }
 }
 const createLibros = async (req, res, next) => {
-    console.log("hola");
     try {
         const newLibro = await new Libro(req.body)
 

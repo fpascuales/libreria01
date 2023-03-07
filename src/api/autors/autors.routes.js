@@ -5,6 +5,6 @@ const autorRoutes = require("express").Router()
 
 autorRoutes.get("/", getAutors)
 autorRoutes.post("/", [isAdmin], createAutor)
-autorRoutes.delete("/:idAutor", deleteAutor)
+autorRoutes.delete("/:idAutor", [isAdmin], deleteAutor)
 
 module.exports = autorRoutes
